@@ -1,271 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Constructora San Vicente | Construcción y Remodelaciones en Chile</title>
-  <meta name="description" content="Constructora San Vicente desarrolla casas, ampliaciones y remodelaciones en la Región Metropolitana, Quinta y Sexta Región. Planificación técnica, control de costos y cumplimiento de plazos.">
-  <meta name="author" content="Constructora San Vicente">
-  <meta name="theme-color" content="#0B0B0B">
-
-  <style>
-    :root{
-      --bg:#ffffff;
-      --text:#0b0b0b;
-      --muted:#666;
-      --line:#e9e9e9;
-      --soft:#f6f6f6;
-      --dark:#0b0b0b;
-      --shadow: 0 15px 40px rgba(0,0,0,.10);
-      --radius: 18px;
-      --max: 1100px;
-    }
-
-    *{ margin:0; padding:0; box-sizing:border-box; }
-    html{ scroll-behavior:smooth; }
-
-    body{
-      font-family: Arial, Helvetica, sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
-    }
-
-    a{ text-decoration:none; color:inherit; }
-
-    /* HEADER */
-    .header{
-      position:sticky;
-      top:0;
-      background:#fff;
-      border-bottom:1px solid var(--line);
-      z-index:50;
-    }
-
-    .header-inner{
-      max-width:var(--max);
-      margin:auto;
-      padding:16px 18px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap: 12px;
-    }
-
-    .brand strong{
-      font-size:14px;
-      letter-spacing:2px;
-      text-transform:uppercase;
-    }
-
-    .nav a{
-      margin-left:18px;
-      font-size:13px;
-      color:#111;
-      opacity:.9;
-    }
-    .nav a:hover{ opacity:1; }
-
-    .btn{
-      display:inline-block;
-      padding:12px 18px;
-      border-radius:999px;
-      background:#000;
-      color:#fff;
-      font-size:12px;
-      letter-spacing:1px;
-      border:none;
-      cursor:pointer;
-    }
-
-    /* HERO */
-    .hero{
-      padding:80px 18px;
-      max-width:var(--max);
-      margin:auto;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:30px;
-      align-items:center;
-    }
-
-    .hero h1{
-      font-size:42px;
-      font-weight:300;
-      line-height:1.2;
-    }
-
-    .hero p{
-      margin-top:20px;
-      color:var(--muted);
-      font-size:16px;
-    }
-
-    .hero-image{
-      height:420px;
-      border-radius:var(--radius);
-      background:
-        linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.20)),
-        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=70")
-        center/cover no-repeat;
-      box-shadow: var(--shadow);
-    }
-
-    /* SECTIONS */
-    .section{
-      padding:80px 18px;
-      max-width:var(--max);
-      margin:auto;
-    }
-
-    .section h2{
-      font-size:30px;
-      margin-bottom:14px;
-      font-weight:400;
-    }
-
-    .lead{
-      color:var(--muted);
-      margin-bottom:30px;
-      max-width: 70ch;
-    }
-
-    /* SERVICES (con imágenes visibles) */
-    .services{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:26px;
-    }
-
-    .service{
-      border-radius:var(--radius);
-      overflow:hidden;
-      box-shadow:var(--shadow);
-      background:#fff;
-      border: 1px solid var(--line);
-    }
-
-    .service .img-wrap{
-      position: relative;
-      overflow:hidden;
-    }
-
-    .service img{
-      width:100%;
-      height:240px;
-      object-fit:cover;
-      display:block;
-      transform: scale(1);
-      transition: transform .5s ease;
-    }
-
-    .service:hover img{
-      transform: scale(1.06);
-    }
-
-    .service .caption{
-      padding:18px 18px 20px;
-      background: #fff;
-    }
-
-    .service .caption strong{
-      display:block;
-      font-size:15px;
-      margin-bottom:8px;
-      letter-spacing:.2px;
-    }
-
-    .service .caption p{
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    /* CONTACT */
-    .contact-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:20px;
-      align-items:start;
-    }
-
-    input, textarea, select{
-      width:100%;
-      padding:12px;
-      margin-bottom:12px;
-      border:1px solid #ccc;
-      border-radius:12px;
-      font-size:14px;
-    }
-
-    footer{
-      border-top:1px solid var(--line);
-      padding:30px 18px;
-      text-align:center;
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    /* WHATSAPP */
-    .whatsapp{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25D366;
-      color:#fff;
-      padding:14px 18px;
-      border-radius:999px;
-      font-weight:bold;
-      box-shadow:0 10px 24px rgba(0,0,0,.18);
-      z-index: 99;
-    }
-
-    @media(max-width:900px){
-      .hero{ grid-template-columns:1fr; }
-      .services{ grid-template-columns:1fr; }
-      .contact-grid{ grid-template-columns:1fr; }
-      .hero h1{ font-size:30px; }
-      .hero-image{ height:320px; }
-    }
-  </style>
-</head>
-
-<body>
-
-<header class="header">
-  <div class="header-inner">
-    <div class="brand">
-      <strong>Constructora San Vicente</strong>
-    </div>
-    <nav class="nav">
-      <a href="#nosotros">Nosotros</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div>
-    <h1>Construcción y remodelación con planificación, control y cumplimiento real.</h1>
-    <p>Casas desde cero, ampliaciones y remodelaciones en la Región Metropolitana, Quinta y Sexta Región.</p>
-    <br>
-    <a class="btn" href="#contacto">Solicitar evaluación</a>
-  </div>
-  <div class="hero-image" aria-label="Imagen de obra"></div>
-</section>
-
-<section id="nosotros" class="section">
-  <h2>Quiénes Somos</h2>
-  <p class="lead">
-    En Constructora San Vicente ejecutamos proyectos habitacionales con planificación técnica, control de costos y seguimiento permanente de obra.
-    Procesos claros, responsabilidad estructural y comunicación directa con el cliente.
-  </p>
-</section>
-
 <section id="servicios" class="section">
   <h2>Servicios</h2>
-  <p class="lead">Estas son las 4 áreas principales con las imágenes que me pediste (siempre visibles).</p>
+  <p class="lead">Áreas principales de trabajo con ejemplos visuales referenciales.</p>
 
   <div class="services">
 
@@ -279,7 +14,7 @@
         />
       </div>
       <div class="caption">
-        <strong>Casas terminadas (Construcción de casas)</strong>
+        <strong>Casas terminadas</strong>
         <p>Viviendas terminadas con estándar técnico y foco en terminaciones.</p>
       </div>
     </div>
@@ -288,7 +23,7 @@
     <div class="service">
       <div class="img-wrap">
         <img
-          src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=70"
+          src="https://images.unsplash.com/photo-1582582429415-3f1cf0fd3c65?auto=format&fit=crop&w=1600&q=70"
           alt="Casa con ampliación"
           loading="lazy"
         />
@@ -310,7 +45,7 @@
       </div>
       <div class="caption">
         <strong>Remodelaciones integrales</strong>
-        <p>Baños modernos, cocinas y espacios completos con ejecución precisa.</p>
+        <p>Baños modernos y espacios completos con ejecución precisa.</p>
       </div>
     </div>
 
@@ -319,67 +54,15 @@
       <div class="img-wrap">
         <img
           src="https://images.unsplash.com/photo-1581092919535-7146f5c2a0f1?auto=format&fit=crop&w=1600&q=70"
-          alt="Planos en CAD en pantalla"
+          alt="Planos CAD en pantalla"
           loading="lazy"
         />
       </div>
       <div class="caption">
         <strong>Asesorías y cubicaciones</strong>
-        <p>Planos, cubicaciones y análisis técnico para optimizar tu inversión.</p>
+        <p>Planos CAD, cubicaciones y análisis técnico para optimizar tu inversión.</p>
       </div>
     </div>
 
   </div>
 </section>
-
-<section id="contacto" class="section">
-  <h2>Contacto</h2>
-
-  <div class="contact-grid">
-    <div>
-      <form action="https://formsubmit.co/contacto.sanvicente.cl@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Nueva solicitud desde la web - Constructora San Vicente">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-
-        <input type="text" name="Nombre" placeholder="Nombre" required>
-        <input type="email" name="Correo" placeholder="Correo" required>
-        <input type="tel" name="Teléfono" placeholder="Teléfono">
-
-        <select name="Tipo de proyecto">
-          <option value="">Tipo de proyecto</option>
-          <option>Casa desde cero</option>
-          <option>Remodelación</option>
-          <option>Ampliación</option>
-          <option>Asesoría / Presupuesto</option>
-        </select>
-
-        <textarea name="Mensaje" rows="5" placeholder="Comuna y detalles del proyecto"></textarea>
-
-        <button class="btn" type="submit">Enviar solicitud</button>
-      </form>
-    </div>
-
-    <div>
-      <p class="lead">
-        Atendemos proyectos en la Región Metropolitana, Quinta Región y Sexta Región.
-        Agenda una evaluación y revisemos tu proyecto con criterio técnico y planificación clara.
-      </p>
-      <p style="color:var(--muted); font-size:14px;">
-        WhatsApp directo: +56 9 7737 7936<br>
-        Correo: contacto.sanvicente.cl@gmail.com
-      </p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  © 2026 Constructora San Vicente | RM · V Región · VI Región
-</footer>
-
-<a class="whatsapp" href="https://wa.me/56977377936" target="_blank" rel="noopener">
-  WhatsApp
-</a>
-
-</body>
-</html>
