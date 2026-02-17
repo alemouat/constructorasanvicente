@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Constructora San Vicente</title>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #111;
+    line-height: 1.6;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.button {
+    padding: 12px 28px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section h3 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.services ul {
+    list-style: none;
+}
+
+.services li {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.projects div {
+    height: 200px;
+    background: #eee;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+.contact button {
+    padding: 12px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+}
+
+@media(max-width:768px){
+    .hero h2 {
+        font-size: 28px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>CONSTRUCTORA SAN VICENTE</h1>
+    <nav>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h2>Construimos proyectos con respaldo técnico y compromiso real.</h2>
+        <p>Casas, ampliaciones y remodelaciones en la Región Metropolitana, Quinta y Sexta Región.</p>
+        <a class="button" href="#contacto">Solicitar evaluación de proyecto</a>
+    </div>
+</section>
+
+<section id="nosotros">
+    <h3>Quiénes Somos</h3>
+    <p>
+        En Constructora San Vicente desarrollamos proyectos habitacionales desde cero y remodelaciones integrales.
+        Trabajamos cada obra con planificación técnica, control de costos y cumplimiento de plazos.
+        Nuestro enfoque combina estructura profesional con trato cercano y transparente.
+    </p>
+</section>
+
+<section id="servicios" class="services">
+    <h3>Nuestros Servicios</h3>
+    <ul>
+        <li>Construcción de casas desde cero</li>
+        <li>Ampliaciones y segundas viviendas</li>
+        <li>Remodelaciones completas</li>
+        <li>Obras menores</li>
+        <li>Asesoría técnica y cubicaciones</li>
+    </ul>
+</section>
+
+<section id="proyectos">
+    <h3>Proyectos Ejecutados</h3>
+    <div class="projects">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</section>
+
+<section id="contacto" class="contact">
+    <h3>Conversemos tu proyecto</h3>
+    <form>
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <input type="text" placeholder="Teléfono">
+        <textarea rows="5" placeholder="Cuéntanos sobre tu proyecto"></textarea>
+        <button type="submit">Enviar mensaje</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Constructora San Vicente | Región Metropolitana, Quinta y Sexta Región
+</footer>
+
+</body>
+</html>
