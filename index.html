@@ -35,7 +35,7 @@
 
     /* --- HEADER --- */
     header {
-      padding: 20px 0; /* Aumentado ligeramente el padding */
+      padding: 20px 0;
       border-bottom: 1px solid rgba(0,0,0,0.05);
       position: sticky;
       top: 0;
@@ -48,7 +48,7 @@
     
     /* LOGO AGRANDADO */
     .logo-container img {
-      height: 95px; /* De 70px subió a 95px para mayor impacto */
+      height: 95px; /* Mantiene el tamaño grande solicitado */
       width: auto;
       display: block;
       transition: 0.3s;
@@ -66,16 +66,16 @@
 
     .nav a:hover { color: var(--accent); }
 
-    /* --- HERO: CASA TIPO GALPÓN (BARNHOUSE) --- */
+    /* --- HERO: IMAGEN PRINCIPAL ACTUALIZADA --- */
     .hero { 
       height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      /* Imagen actualizada a casa tipo galpón moderno */
+      /* Se usa la imagen 'principal1' del root */
       background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
-                  url('https://images.unsplash.com/photo-1510627489930-0c1b0ba0548f?auto=format&fit=crop&w=1600&q=80');
+                  url('principal1.png'); 
       background-size: cover;
       background-position: center;
       color: white;
@@ -146,7 +146,7 @@
 
     @media (max-width: 768px) {
       .nav { display: none; }
-      .logo-container img { height: 70px; }
+      .logo-container img { height: 75px; } /* Ajuste móvil */
       .hero h1 { font-size: 2.2rem; }
     }
   </style>
@@ -177,7 +177,7 @@
   <h2 class="section-title">Nuestra Especialidad</h2>
   <div class="services-grid">
     <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80" alt="Construcción Galpón Moderno">
+      <img src="principal_retoque.png" alt="Construcción de Viviendas San Vicente">
       <div class="service-info">
         <h3>Construcción de Viviendas</h3>
         <p>Especialistas en estructuras modernas y funcionales, desde el diseño arquitectónico hasta la entrega de llaves.</p>
@@ -210,7 +210,7 @@
           <input type="email" name="Email" placeholder="Correo electrónico" required>
         </div>
         <select name="Tipo de Proyecto" style="margin-bottom: 20px;">
-          <option>Construcción Casa Nueva (Tipo Galpón/Moderno)</option>
+          <option>Construcción Casa Nueva</option>
           <option>Remodelación / Ampliación</option>
           <option>Asesoría Técnica</option>
         </select>
